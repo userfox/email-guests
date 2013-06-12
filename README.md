@@ -1,15 +1,12 @@
-Email guests to your website
-------------
+# Email guests to your website
 
 email-guests is a tiny snippet of code that you can embed or link to to allow visitors to your website to subscribe to your newsletter or drip email sequence.
 
-Come Again?
------------
+## Come Again?
 
 You can place this snippet of code in your blog footer, and then routinely email them with interesting content and discussions.
 
-Hasn't this been done before?
------------------------------
+### Hasn't this been done before?
 
 Kind of. Certainly newsletter companies allow you to embed similar things to your site, but userfox has a few distinct advantages:
 
@@ -20,8 +17,7 @@ Kind of. Certainly newsletter companies allow you to embed similar things to you
 * our templates are mobile optimized
 * you can a/b test them!
 
-But why?
---------
+### But why?
 
 Because sending more email is good! 
 
@@ -30,8 +26,7 @@ Because it's hard to convince people to give you money, and sending them an emai
 Don't believe us? [Read more here](http://www.kalzumeus.com/2012/05/31/can-i-get-your-email/) or even [pay for a course](https://training.kalzumeus.com/lifecycle-emails) on this stuff!
 
 
-Okay, I am sold. What next?
----------------------------
+### Okay, I am sold. What next?
 
 Download index.html and sign up for [userfox](http://userfox.com) – enter your [ClientID](https://app.userfox.com/settings/integration) on line 39
 
@@ -43,41 +38,34 @@ becomes
 
 and you're done! You can then upload this file somewhere, host it on github (instructions coming very soon!) or copy and paste the contents onto your own web server. 
 
-I am an existing userfox customer what is this
-----------------------------------------------
+### I am an existing userfox customer what is this
 
 If you paste your existing ClientID you'll be able to email these guests without having to have two pesky userfox signups! just send the newsletter or welcome emails to users that have the custom data "Source - Blog"
 
 
-I need a demo
--------------
+### I need a demo
 
 Bjoern has a great newsletter [here](http://newsletter.zinssmeister.co)!
 
 
-Can I list my demo?
--------------------
+### Can I list my demo?
 
 YES!
 
-What about RSS integration?
----------------------------
+### What about RSS integration?
 
 We don't support that. We thought about it, but decided they're usually terrible. Our solution: blog and then manually write the email linking to it! It's more work, but it won't suck.
 
 
-Do you even embed
------------------
+### Do you even embed
 
 Yes! Just link to the site via an iFrame, boom!
 
-Today your website visitors are
--------------------------------
+#### Today your website visitors are
 
 ![bored](http://3.bp.blogspot.com/-RxyqhvTqcEw/T7Xo0UyKf3I/AAAAAAAADbI/Qwdd9I4Z21I/s1600/tumblr_m3kddxiIBr1r547jd.gif)
 
 
-With this your website visitors will be
----------------------------------------
+#### With this your website visitors will be
 
 ![awe](http://stream1.gifsoup.com/view/51690/oh-my-god-o.gif)
