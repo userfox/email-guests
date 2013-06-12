@@ -20,6 +20,16 @@ Kind of. Certainly newsletter companies allow you to embed similar things to you
 * our templates are mobile optimized
 * you can a/b test them!
 
+But why?
+--------
+
+Because sending more email is good! 
+
+Because it's hard to convince people to give you money, and sending them an email sequence that explains why you rock is much easier than a cold sell.
+
+Don't believe us? [Read more here](http://www.kalzumeus.com/2012/05/31/can-i-get-your-email/) or even [pay for a course](https://training.kalzumeus.com/lifecycle-emails) on this stuff!
+
+
 Okay, I am sold. What next?
 ---------------------------
 
