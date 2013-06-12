@@ -44,8 +44,13 @@ Can I list my demo?
 
 YES!
 
-
 What about RSS integration?
 ===========================
 
 We don't support that. We thought about it, but decided they're usually terrible. Our solution: blog and then manually write the email linking to it! It's more work, but it won't suck.
+
+
+Do you even embed
+=================
+
+Yes! Just link to the site via an iFrame, boom!
