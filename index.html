@@ -1,53 +1,48 @@
 <html>
-	<head>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	</head>
-	<body>
-		<style>
-		#container {width: 400px; margin: 0 auto;}
-		</style>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</head>
+<body>
 
-		<div id="container">
-			<form name="newsletter-form" id="newsletter-form">
-				<input type="text" onclick="this.select()" autofocus="autofocus" name="email" id="email" value="Your Email Address" id="email" />
-				<input type="submit" value="Subscribe" name="sub-button" id="sub-button"/>
-			</form>
-		</div>
+<div style="width: 400px; margin: 0 auto;">
+	<form name="newsletter-form" id="newsletter-form">
+		<input type="text" onclick="this.select()" autofocus="autofocus" name="email" id="email" value="Your Email Address" id="email" />
+		<input type="submit" value="Subscribe" name="sub-button" id="sub-button"/>
+	</form>
+</div>
 
 
-	<script type="text/javascript">
-			$('#email').on('focus', function(e){ $(this).val(''); });
+<script type="text/javascript">
+		var originalLabel = $('#email').val();
+		$('#email').on('focus', function(e){ $(this).val(''); });
+		
+		var _ufq = _ufq || [];
+		/* Event to submit the email to userfox
+		 * Listens to form submit, then makes the init and track call to userfox. 
+		 */
+		$('#newsletter-form').on('submit', function(e){
+		e.preventDefault();
+		var emailAddress = $('#email').val();
+
+		if(emailAddress == "" || emailAddress == originalLabel) alert("Please enter an Email Address.")
+		else{
+
+			var now = new Date();
+			_ufq.push(['init', {
+		      email: emailAddress, 
+		      clientId: ""  // paste your client ID here! you MUST do this.
+			}, function(er, succes){
+				_ufq.push(['track', { signup_date: now.toISOString(), source: "visitor" }]); //we are passing in the custom data 'source' to help indicate where a user signup from
+				//all good, thanks!
+				alert('Thank you!');
+				$('#email').val(originalLabel);
+			}]);
 			
-			var _ufq = _ufq || [];
-			/* Event to submit the email to userfox
-			 * Listens to form submit, then makes the init and track call to userfox. 
-			 */
-			$('#newsletter-form').on('submit', function(e){
-			e.preventDefault();
-			var emailAddress = $('#email').val();
-
-
-
-			if(emailAddress == "" || emailAddress == "Your Email Address"){
-				alert("Please enter a valid Email Address.")
-			}
-			else{
-
-				var now = new Date();
-				_ufq.push(['init', {
-			      email: emailAddress, 
-			      clientId: ""  // paste your client ID here! you MUST do this.
-				}, function(er, succes){
-					_ufq.push(['track', { signup_date: now.toISOString(), source: "visitor" }]); //we are passing in the custom data 'source' to help indicate where a user signup from
-					//all good, thanks!
-					alert('Thank you!');
-					$('#email').val('Your Email Address');
-				}]);
-			}
-		});
-		(function() {var ufs = document.createElement("script"); ufs.type='text/javascript'; ufs.src=document.location.protocol+'//d2y71mjhnajxcg.cloudfront.net/js/userfox-stable.js'; ufs.async=true; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ufs, s);})();  
+		}
+	});
+	(function() {var ufs = document.createElement("script"); ufs.type='text/javascript'; ufs.src=document.location.protocol+'//d2y71mjhnajxcg.cloudfront.net/js/userfox-stable.js'; ufs.async=true; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ufs, s);})();  
 </script>
 
 
-	</body>
+</body>
 </html>
