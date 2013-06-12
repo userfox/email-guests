@@ -17,7 +17,8 @@ Kind of. Certainly newsletter companies allow you to embed similar things to you
 * you can create drip sequences (day 0, day 30, day 45, etc etc)
 * you can send newsletters in addition to afforementioned drip sequences
 * it's free!
-* 
+* our templates are mobile optimized
+* you can a/b test them!
 
 Okay, I am sold. What next?
 ===========================
@@ -31,6 +32,11 @@ becomes
     		      clientId: "123493278482374832742"  // paste your client ID here! you MUST do this.
 
 and you're done! You can then upload this file somewhere, host it on github (instructions coming very soon!) or copy and paste the contents onto your own web server. 
+
+I am an existing userfox customer what is this
+==============================================
+
+If you paste your existing ClientID you'll be able to email these guests without having to have two pesky userfox signups! just send the newsletter or welcome emails to users that have the custom data "Source = Blog"
 
 
 I need a demo
