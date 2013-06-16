@@ -13,6 +13,8 @@
 
 
 <script type="text/javascript">
+	var _ufq;
+	$(document).ready(function(){	
 		var originalLabel = $('#email').val();
 		$('#email').on('focus', function(e){ $(this).val(''); });
 		
@@ -23,15 +25,15 @@
 		$('#newsletter-form').on('submit', function(e){
 		e.preventDefault();
 		var emailAddress = $('#email').val();
-
+		
 		if(emailAddress == "" || emailAddress == originalLabel) alert("Please enter an Email Address.")
 		else{
-
+		
 			var now = new Date();
 			_ufq.push(['init', {
 		      email: emailAddress, 
 		      clientId: ""  // paste your client ID here! you MUST do this.
-			}, function(er, succes){
+			}, function(er, success){
 				_ufq.push(['track', { signup_date: now.toISOString(), source: "visitor" }]); //we are passing in the custom data 'source' to help indicate where a user signup from
 				//all good, thanks!
 				alert('Thank you!');
@@ -39,6 +41,7 @@
 			}]);
 			
 		}
+		});
 	});
 	(function() {var ufs = document.createElement("script"); ufs.type='text/javascript'; ufs.src=document.location.protocol+'//d2y71mjhnajxcg.cloudfront.net/js/userfox-stable.js'; ufs.async=true; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ufs, s);})();  
 </script>
